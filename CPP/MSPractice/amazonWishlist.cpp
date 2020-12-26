@@ -1,4 +1,6 @@
 #include <iostream>
+#include <map>
+#include <unordered_map>
 using namespace std;
 
 /*
@@ -13,28 +15,42 @@ Proposed Solution:
 3.Return PAIR of items for cost.
 */
 
-string solution (int total){
-/*
-1. Use a hash table to associate item names (key)
-   to price of the items (value)
-2. Take in the total amount you can use and subtract
-   the amount of each item to see if you can find another
-   that fits in the same area.
+string solution (int amountToSpend, map<string, double> &amazonItems){
+	double total = amountToSpend;
+   double amountLeftOver;
+	cout << "So it looks like you have $" << total << " to spend."<< endl;
+   //look through map to find what you can spend
+   //do the math for each item and find an alternative to add to it !only two items needed
+   
+   
+   for (int i = 0;i < amazonItems.size();i++){
+     cout << "total = " << total << endl;
 
-
-
-*/
-
-
-	double amountToSpend;
-	cout << "So it looks like you have $" << total << "to spend."<< endl;
-	
-	
-
+   }
+   //amountLeftOver = total - 
 }
 
 int main(){
+   double amountToSpend = 30.00;
+   vector<string, double> amazonItems{
+      {"book", 3.00},
+      {"pencil", 0.5},
+      {"calculator", 4.00},
+      {"ruler", 1.5},
+      {"computer", 300.00},
+   };
 
+   /*
+      map<string, double> amazonItems{
+      {"book", 3.00},
+      {"pencil", 0.5},
+      {"calculator", 4.00},
+      {"ruler", 1.5},
+      {"computer", 300.00},
+   };
+   */
 
-	return 0;
+   solution(amountToSpend, amazonItems);
+   return 0;
 }
+	
