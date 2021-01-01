@@ -3,7 +3,7 @@ Author:Michael Disieno
 Reason:Practicing for Microsoft Job
 4. Find the most occurring word in a given text  
 	Idea: pull punctuation out, split each word 
-		  into a hash map, and then tally up word.
+	into a hash map, and then tally up word.
 **************************************************/
 #include <iostream>
 #include <map>
@@ -30,19 +30,21 @@ string solution(string paragraph){
 		if(isupper(paragraph[i])){
 			paragraph[i] = tolower(paragraph[i]);
 		}
-	//find the most used word.
-	//find first space
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	}
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		//find the most used word.
 		//!!!! You are here, pull words into hash map!!!!
+		//find first space
 		//find second space
 		//pull word from inside those spaces.
 		//check if word is in hash map
 		//if not, add word and increment second value
 
-
-
-	}
 		for (int i = 0;i <= paragraph.length();i++){
+		if(isspace(paragraph[i])){
+			cout << "you found a space" << endl;
+		}
 		if(isalpha(paragraph[i])){
 
 		}
