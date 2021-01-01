@@ -1,6 +1,7 @@
 #include <iostream>
 #include <map>
 #include <unordered_map>
+#include <iterator>
 using namespace std;
 
 /*
@@ -18,21 +19,32 @@ Proposed Solution:
 string solution (int amountToSpend, map<string, double> &amazonItems){
 	double total = amountToSpend;
    double amountLeftOver;
-	cout << "So it looks like you have $" << total << " to spend."<< endl;
+
+
+
+   //figure out iterator to create index for hash map
+   iterator it = amazonItems.begin();
+	
+   
+   
+   
+   cout << "So it looks like you have $" << total << " to spend."<< endl;
    //look through map to find what you can spend
    //do the math for each item and find an alternative to add to it !only two items needed
    
-   
+   //for every item within amazonItems do:
    for (int i = 0;i < amazonItems.size();i++){
      cout << "total = " << total << endl;
-
+     //subtract item
    }
    //amountLeftOver = total - 
 }
 
 int main(){
    double amountToSpend = 30.00;
-   vector<string, double> amazonItems{
+   string itemName[100];
+   double itemCost[100] = {0.0};
+   map<string, double> amazonItems{
       {"book", 3.00},
       {"pencil", 0.5},
       {"calculator", 4.00},
@@ -40,14 +52,22 @@ int main(){
       {"computer", 300.00},
    };
 
+
+
    /*
-      map<string, double> amazonItems{
+      //Vector
+      vector<string, double> amazonItems{
       {"book", 3.00},
       {"pencil", 0.5},
       {"calculator", 4.00},
       {"ruler", 1.5},
       {"computer", 300.00},
    };
+
+
+
+      //map
+
    */
 
    solution(amountToSpend, amazonItems);
