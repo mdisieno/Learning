@@ -23,7 +23,7 @@ string solution(string paragraph){
 	for (int i = 0;i <= paragraph.length();i++){
 		//cout << i << endl; //CODE TRACE - check increment
 		if(ispunct(paragraph[i])){
-			cout << "found punctuation: " << paragraph[i] << endl; //CODE TRACE - notify punctuation is found 
+			//cout << "found punctuation: " << paragraph[i] << endl; //CODE TRACE - notify punctuation is found 
 			paragraph.erase(i,1);
 		}
 		//convert all upper to lower so words are doubled
@@ -43,7 +43,7 @@ string solution(string paragraph){
 
 		for (int i = 0;i <= paragraph.length();i++){
 		if(isspace(paragraph[i])){
-			cout << "you found a space" << endl;
+			//cout << "you found a space" << endl; //CODE TRACE - check for spaces
 		}
 		if(isalpha(paragraph[i])){
 
