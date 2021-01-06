@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <string>
@@ -11,33 +10,36 @@ struct Node{
 
 class Trie{
     Trie* children[26];
-    char c;
     bool isWord;
     
     public:
-        Trie(char c){
+        Trie(){
             isWord = false;
             for (int i; i < 26;i++){
                 children[i] = nullptr;
             }
         }
+        void insert(string input){
+            Trie* curr = this;
+            for (char c: input){
+                if (!(curr->children[c-'a'])){
+                        curr->children[c -'a'] = new Trie;
+                    //inserted to move current to spot
+                    curr = curr->children[c-'a'];
+                }
+            }
+        }
+        bool startsWith(string prefix){
+        }
+        bool search(string input){
+            vector<string> words;
+            bool isItThere = false;
+            cout << "The word you'll be checking is: " << input << endl;
+    }
+
+
 };
 
-void insert(string input){
-
-}
-
-bool startsWith(string prefix){
-
-}
-
-bool search(string input){
-    vector<string> words;
-    bool isItThere = false;
-    cout << "The word you'll be checking is: " << input << endl;
-
-
-}
 
 
 int main(){
