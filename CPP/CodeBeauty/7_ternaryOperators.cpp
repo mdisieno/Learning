@@ -28,13 +28,25 @@ int main(){
         }
         cout << "Guest, enter your number: ";
         cin >> guestUserNum; 
+        if (guestUserNum == hostUserNum){
+            break;
+        }
+
     }
 
+
+    //Ternary
+    (guestUserNum==hostUserNum)? cout << "Congrats yo got it!!" : cout << "Sorry, you suck..." ;
+    cout << endl;
+
+
+    /*Non-Ternary
     if(guestUserNum==hostUserNum){
         cout << "Congrats you got it!";
     }else{
         cout << "Sorry, you suck.....";
     }
+    */
     
 
 
