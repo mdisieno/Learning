@@ -1,35 +1,45 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+/*************************************************
+ * AlgoExpert Prob: TwoNumSum
+ * !!!! - This program is merely for my own learning - !!!!
+ * 
+ * Possible Routes:
+ * My Notes (Inline will have {DO - } on it.):
+ * 1. Create a hash table to house the values.
+ * 2. Subtract the current position within the array from the total
+ * 3. Check hash table for difference from total
+ * 
+ * 
+ * Big O : 
+ *************************************************/
 
-/*
-!!!! - This program is merely for my own learning - !!!!
-1. Create a hash table to house the values.
-2. Subtract the current position within the array from the total
-3. Check hash table for difference from total
-*/
+/**************************************************
+ * Disclaimer - This is the approach I took for
+ * learning, this does not mean this is the only way.
+ * Some of These answers might be the same as what algo
+ * uses, but you won't get the entire learning by copying
+ * answers and not understanding the question. Please
+ * help support clement and do the work.
+ **************************************************/
 
 
+//DO - returning a vector so we can provide the two numbers.
 vector<int> twoNumberSum(vector<int> array, int targetSum) {
-  // Write your code here.
-	for (int i = 0; i < array.size() - 1; i++){ // loop through the array
-		//Below will be the first number to add
-		int firstNum = array[i]; 
-		/*below will put the next number after i and it
-		increments until it finds....*/
-		for (int j = i + 1; j < array.size(); j++){ //
-			int secondNum = array[j];
-			/*....a number that when added to the second number
-			equals the Target Sum.*/
-			if (firstNum + secondNum == targetSum){
-				//When found, return as a vector as there are two values
-				return vector<int>{firstNum, secondNum};
+
+	//DO - CODE TRACE: for every number within the array....
+	for (int i = 0; i < array.size() - 1; i++){
+		int firstNum = array[i]; //DO - CODE TRACE: Take in the first number.
+		for (int j = i + 1; j < array.size(); j++){ //DO - CODE TRACE: Then iterate:2ndNum
+			int secondNum = array[j]; // DO - CODE TRACE: Take in second number.
+			if (firstNum + secondNum == targetSum){ // DO - CODE TRACE: if numbers = target sum
+				return vector<int>{firstNum, secondNum};// DO - CODE TRACE: return the win!
 			}
 		}
 	}
   return {};
 }
-
 
 
 int main(){
