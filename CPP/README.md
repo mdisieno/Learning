@@ -1,0 +1,1 @@
+This folder is full of my work in online courses to show what I am learning. I'm working on making it relatively easy to follow for those who are in my shoes a bit rusty. If you have any questions about how things work or need notations, let me know. I'll do my best to make it easy to follow my logic and approach.
