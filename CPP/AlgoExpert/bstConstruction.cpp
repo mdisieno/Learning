@@ -132,8 +132,13 @@ class BST {
                 value = right->value;
                 right = right->left;
                 right = right->right;
+            }else{
+                //this is a single-node tree; do nothing.
             }
-        }
+        }else if(parent->left == this){
+            parent->left = left != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
+        }else if(parent->right == this){
+            parent->right = right != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
         return *this;
     }
 //!!!!!! YOU ARE HERE !!!!!!!!!!!!!!!!!!!!!!!!!
