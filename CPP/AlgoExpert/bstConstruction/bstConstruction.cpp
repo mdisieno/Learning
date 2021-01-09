@@ -23,9 +23,6 @@
 #include <stdlib.h>
 #include <string>
 #include <vector>
-
-
-#include <vector>
 using namespace std;
 
 // Do not edit the class below except for
@@ -117,7 +114,7 @@ class BST {
                 //move down the right with val and new parent
                 right -> remove(val,this);
             }
-        }else {//well it looks like its not a leaf.....
+        }else{//well it looks like its not a leaf.....
             if (left != NULL && right != NULL){
                 value = right->getMinValue(); //QUESTION - Why go right?
                 //head right and chase the remove?
@@ -125,6 +122,7 @@ class BST {
 
             //THIS WHOLE BIT CONFUSEDS THE F*CK OUT OF ME    
             }else if(parent == NULL){
+            if(left!=NULL){
                 value = left->value;
                 right = left->right;
                 left = left->left;
@@ -135,17 +133,16 @@ class BST {
             }else{
                 //this is a single-node tree; do nothing.
             }
-        }else if(parent->left == this){
-            parent->left = left != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
-        }else if(parent->right == this){
-            parent->right = right != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
+            }else if(parent->left == this){
+                parent->left = left != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
+            }else if(parent->right == this){
+                parent->right = right != NULL ? left:right; //ternary, YAY I KNOW SOMETHING!
+            }
+    }
         return *this;
     }
 //!!!!!! YOU ARE HERE !!!!!!!!!!!!!!!!!!!!!!!!!
 };
-
-
-using namespace std;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int main(){
     
