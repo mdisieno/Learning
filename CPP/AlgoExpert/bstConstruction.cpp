@@ -46,7 +46,7 @@ class BST {
 
     BST &insert(int val) {
         //if the val incoming is less than the current node value
-        if (val < value) { //why no concern for larger?
+        if (val < value) { //QUESTION - why no concern for larger?
         //LOOK TO SEE WHICH SIDE IS EMPTY
 
         //LEFT SIDE!
@@ -116,6 +116,22 @@ class BST {
             if (right != NULL){
                 //move down the right with val and new parent
                 right -> remove(val,this);
+            }
+        }else {//well it looks like its not a leaf.....
+            if (left != NULL && right != NULL){
+                value = right->getMinValue(); //QUESTION - Why go right?
+                //head right and chase the remove?
+                right->remove(value, this);
+
+            //THIS WHOLE BIT CONFUSEDS THE F*CK OUT OF ME    
+            }else if(parent == NULL){
+                value = left->value;
+                right = left->right;
+                left = left->left;
+            }else if(parent == NULL){
+                value = right->value;
+                right = right->left;
+                right = right->right;
             }
         }
         return *this;
