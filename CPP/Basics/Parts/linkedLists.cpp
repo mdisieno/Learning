@@ -91,7 +91,7 @@ class List{
 			delPtr = current;
 			//move current now to next
 			current = current->next;
-			//now set temp's next to the current we just set
+			//now set temp's next to the current we just set.
 			temp->next = current;
 		}
 
