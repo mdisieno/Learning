@@ -1,0 +1,1 @@
+This folder is for those typical cork screws you get at coding interviews. Whether they are the typical hardball, or the joke that developers have (looking at you CSDojo, AlgoExpert, etc.) these are ways to go about it in CPP. This practice is to better myself and help others.

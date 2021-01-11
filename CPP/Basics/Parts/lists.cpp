@@ -47,16 +47,17 @@ There is no way to go directly to an element, ie. vector[i]
 int main(){
 	list<int> myList(5,0);
         list<int>::iterator outputIt;
+        list<int>::iterator it = myList.begin();
         list<int>::iterator insertIt = myList.begin();
+        list<int>::iterator deleteIt = myList.begin();
         //With lists, you can't directly assign values like vectors/arrays
         //This is because of the structure of the list.
 
         //Bear with me, hair up the but moment. I felt frisky.
         //List loop to handle print and such.
-        for (int i = 0; i < 2;i++){
+        for (int i = 0; i <= 2;i++){
                 if (i == 0){
                         cout << "Swapping a value:" << endl;
-                        list<int>::iterator it = myList.begin();
                         //VV-Moves iterator up 2 from beginning-^^.
                         advance(it, 2);
                         //from there you deref and assign.
@@ -73,6 +74,15 @@ int main(){
                         //"Iterating" through a list. We treat lists like vectors with .begin/.end
                         for(outputIt = myList.begin();outputIt != myList.end();outputIt++){
                                 cout << *outputIt << " ";
+                        }
+                        cout << endl;
+                }else if(i == 2){
+                        cout << "Erasing now: " << endl;
+                        advance(deleteIt, 3);
+                        myList.erase(deleteIt);
+                        //"Iterating" through a list. We treat lists like vectors with .begin/.end
+                        for(outputIt = myList.begin();outputIt != myList.end();outputIt++){
+                        cout << *outputIt << " ";
                         }
                         cout << endl;
                 }else{
