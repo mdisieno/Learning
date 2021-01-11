@@ -23,7 +23,7 @@ class List{
 			node* next;
 			node* previous;
 		};
-		//quick route to mode a node*
+		//quick route to model a node*
 		typedef struct node* nodePtr;
 		nodePtr head;
 		nodePtr current;
@@ -70,7 +70,31 @@ class List{
 		}
 	};
 	void deleteNode(int delData){
-	
+		//start off empty
+		nodePtr delPtr = NULL;
+		//temporary location starting at the head
+		temp = head;
+		//start at the head of the list.
+		current = head;
+			while(current != NULL && current->data != delData){
+				//set temp to follow current...
+				temp = current;
+				//...then move current ahead 1
+				current = current->next;
+			}
+		if (curr == NULL){
+			//this means you at the end of the list.
+			cout << delData << "was not in the list." << endl;
+
+		}else{ //it would be time to delete now.
+			//set the pointer to current.
+			delPtr = current;
+			//move current now to next
+			current = current->next;
+			//now set temp's next to the current we just set
+			temp->next = current;
+		}
+
 	};
 	void printList();
 };
