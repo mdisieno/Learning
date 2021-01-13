@@ -12,7 +12,6 @@
 #include <string>
 #include <vector>
 #include <list>
-
 //Needed for memset() - http://www.cplusplus.com/reference/cstring/memset/
 #include <string.h>
 using namespace std;
@@ -32,6 +31,14 @@ int main(){
     //a pointer is just a mem address, technically an int.
     //using the & points to the memory address of that variable.
     int* ptr = &var;
+
+    int x = 5;
+    int *y = &x;
+    cout << "x = " << x << endl;
+    cout << "*y = " << *y << endl;
+    *y = 10;
+     cout << "*y now = " << *y << endl; 
+    cout << endl;
 
     cout << "Pointer: " << ptr << endl;
 

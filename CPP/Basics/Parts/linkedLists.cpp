@@ -69,6 +69,7 @@ class List{
 			head = n;
 		}
 	};
+	//double check deleteNode to make sure you know it well.
 	void deleteNode(int delData){
 		//start off empty
 		nodePtr delPtr = NULL;
@@ -93,16 +94,28 @@ class List{
 			current = current->next;
 			//now set temp's next to the current we just set.
 			temp->next = current;
+			//trash keeping
+			delete delPtr;
+			cout << "the value " << delData << "was deleted.";
 		}
 
 	};
-	void printList();
+	void printList(){
+		current = head;
+		while(current != NULL){
+			cout << current->data << endl;
+			current = current->next;
+		}
+	};
 };
 
 
 list<int> mylist(5,0); // make a simple list of 5 el with 0's
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 int main(){
-	
+	List Paul;
+
+	Paul.addNode(3);
+
 	return 0;
 }
