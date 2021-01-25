@@ -24,10 +24,7 @@ int strFound = 99;
 		cout <<"\"" << strToSearch << ".\"" << endl;
 	}else{
 		cout << "String not found." << endl;
-
 	}
-
-
 }
 
 
