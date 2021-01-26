@@ -1,3 +1,12 @@
+
+//this is how to associate packages.
+//importing packages
+
+import java.util.*;
+//this gives us the ability to generate ranges
+import java.util.stream.IntStream;
+
+
 public class HelloWorld {
 
     //primary method for execution
@@ -11,5 +20,8 @@ public class HelloWorld {
         //Majority of execution is in here by default
         System.out.println("Hello World!");
         System.out.println("Hello World 2!");
+
+
+        
     }
 }

@@ -12,9 +12,13 @@ public class Variables {
         String helloWorld = "Hello World";
         double bob = 4.0;
 
+        //constant that will never change
+        final double steve = 5.0;
+
         System.out.println(helloWorld);
         System.out.println(numberOne);
         System.out.println(bob);
+        System.out.println(steve);
 
     }
 }
