@@ -1,4 +1,5 @@
 //add scanner package for input
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Input {
@@ -15,5 +16,7 @@ public class Input {
         String easier = "Wow, that was easy.";
         //concatenation for the print. Technic'ly an expression below
         System.out.println("Welcome " + name + "! " + easier);
+        //There are many variations of inputs
+        BigDecimal big = scanner.nextBigDecimal();
     }
 }
