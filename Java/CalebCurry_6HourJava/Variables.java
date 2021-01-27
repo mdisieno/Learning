@@ -1,4 +1,5 @@
 public class Variables {
+    public static final double PI = 3.14159;
     public static void main(String[] args) {
     //Java is statically typed, needs datatype
     //JS is dynamically typed, can build on fly.
@@ -10,5 +11,6 @@ public class Variables {
 
         //Where you declare your variables determines where you can see
         //and access these variables. Keep that in mind.
+        
     }
 }
