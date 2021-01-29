@@ -4,6 +4,10 @@ public class StudentObj {
     double grade = 0.0;
     boolean honors = false;
 
+    public StudentObj(){
+        
+    }
+
     public StudentObj(String name, String major, double GPA){
         this.name = name;
         this.major = major;
