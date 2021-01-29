@@ -5,9 +5,9 @@ public class Book {
     String bookLanguage;
 
     public Book(String title, String author, int pages, String language){
-        bookTitle = title;
-        bookAuthor = author;
-        bookPages = pages;
-        bookLanguage = language;
+        this.bookTitle = title;
+        this.bookAuthor = author;
+        this.bookPages = pages;
+        this.bookLanguage = language;
     }
 }
