@@ -1,3 +1,16 @@
+/*******************************
+ * const will let you manipulate but not fully reassign.
+ * 
+
+
+
+
+ *******************************/
+
+
+
+
+
 console.error("This is an error");
 
 /*
@@ -16,14 +29,15 @@ let score = 10;
 const isCool = true;
 const x = null;
 const y = undefined;
-
+//******************************************************************
 //concatenation
 console.log('My name is ' + name + ' and I am ' + age);
 const hello = "My name is ${name} and I am ${age}";
 console.log(hello);
 
-//string features
 
+//******************************************************************
+//string features
 const s = 'Hello World';
 console.log(s.length);
 console.log(s.toUpperCase());
