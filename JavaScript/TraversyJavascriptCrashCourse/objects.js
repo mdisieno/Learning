@@ -20,8 +20,11 @@ class Person{
         this.lastName = lastName;
         this.dob = new Date (dob);
     }
-    person.prototype.getBirthYear = function(){
+    getBirthYear(){
         return this.dob.getFullYear();
+    }
+    getFullName(){
+        return '${this.firstName} ${this.lastName}';
     }
 }
 
